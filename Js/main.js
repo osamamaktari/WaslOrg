@@ -7,26 +7,25 @@ navlinks.forEach(link => {
     } else {
         link.classList.remove('active');
     }
-})
+});
 
+// impact cards ~
 
+document.addEventListener("DOMContentLoaded", function() {
+    const cards = document.querySelectorAll('.impact-card');
 
+    function revealCards() {
+        cards.forEach(card => {
+            const rect = card.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 50) {
+                card.classList.add('visible');
+            } else {
+                card.classList.remove('visible');
+            }
+        });
+    }
 
-const imges = [
-    "/Images/group-buddies-relaxing-chess.png",
-    "/Images/group-buddies-relaxing-park.png"
-];
-
-let current = 0;
-const hero = document.getElementById("hero");
-
-function changebg() {
-    current = (current + 1) % imges.length;
-    hero.style.backgroundImage = `url('${imges[current]}')`;
-}
-
-
-hero.style.backgroundImage = `url('${imges[0]}')`;
-
-
-setInterval(changebg, 5000);
+    window.addEventListener('scroll', revealCards);
+    window.addEventListener('resize', revealCards);
+    revealCards();
+});
