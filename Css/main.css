@@ -6,7 +6,7 @@
 :root {
     --primary-color: #031882;
     --secondary-color: #fab600;
-    --text-color: #ffffff;
+    --text-color: #ebebeb;
     --background-color: #f0f0f0;
     --font-size: 16px;
 }
@@ -17,13 +17,21 @@
     color: var(--text-color);
 }
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
 .top-bar {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 6px;
     background-color: var(--primary-color);
-    background-image: url(Images/pattern-bg-blue.png);
+    background-image: url(../Images/pattern-bg-blue.png);
+    background-position: center;
 }
 
 .nav-links {
@@ -116,4 +124,36 @@ ul li {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+/* main section start */
+
+.hero {
+    min-height: 60vh;
+    background: url('../Images/group-buddies-relaxing-park.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 30px;
+    color: var(--text-color);
+    padding-bottom: 20px;
 }
