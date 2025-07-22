@@ -157,3 +157,87 @@ ul li {
     color: var(--text-color);
     padding-bottom: 20px;
 }
+
+.btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 2rem;
+    background: #e67e22;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #cf711f;
+}
+
+
+/* about us  */
+
+.about-us-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background: #322d98;
+    background-color: var(--primary-color);
+    background-image: url(../Images/pattern-bg-blue.png);
+    background-position: center;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 1100px;
+    width: 100%;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-us-text {
+    flex: 1;
+}
+
+.about-us-text h1 {
+    font-size: 2.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 18px;
+}
+
+.about-us-text p {
+    font-size: var(--font-size);
+    color: var(--text-color);
+}
+
+.about-us-images {
+    flex: 1;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.about-img,
+.about-gif {
+    max-width: 300px;
+    width: 100%;
+}
+
+.about-gif {
+    position: relative;
+    top: -50px;
+}
+
+@media (max-width: 900px) {
+    .about-us-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    .about-us-images {
+        align-items: flex-start;
+    }
+}
