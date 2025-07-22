@@ -9,7 +9,7 @@ navlinks.forEach(link => {
     }
 });
 
-// impact cards ~
+// impact cards effects 
 
 document.addEventListener("DOMContentLoaded", function() {
     const cards = document.querySelectorAll('.impact-card');
