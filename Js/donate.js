@@ -8,7 +8,7 @@ form.addEventListener("submit", function(e) {
         email: form.email.value,
         amount: form.amount.value,
         message: form.message.value,
-        date: new Date().toISOString()
+
     };
 
     let donations = JSON.parse(localStorage.getItem("donations")) || [];
