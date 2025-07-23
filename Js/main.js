@@ -29,3 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('resize', revealCards);
     revealCards();
 });
+
+function goToDonate() {
+    window.location.href = "Pages/donate.html";
+}

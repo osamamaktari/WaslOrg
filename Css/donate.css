@@ -1,0 +1,44 @@
+form {
+    background: #ffffff;
+    padding: 30px;
+    max-width: 450px;
+    margin: 80px auto;
+    /* Margin from top and bottom */
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    color: #333;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    transition: 0.2s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
