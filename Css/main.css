@@ -444,6 +444,54 @@ button.btn:hover {
 }
 
 
+/* map  */
+
+.location-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 30px;
+}
+
+.location-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    direction: rtl;
+    justify-content: center;
+}
+
+.location-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.location-title {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.map-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
 /* footer styles */
 
 .footer {
@@ -498,11 +546,6 @@ button.btn:hover {
 
 .footer-social img:hover {
     transform: scale(1.2);
-}
-
-.right-reserved {
-    text-align: center;
-    /* margin-top: 20px; */
 }
 
 
