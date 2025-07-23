@@ -26,6 +26,9 @@ header {
     top: 0;
     z-index: 1000;
     width: 100%;
+    background-color: var(--primary-color);
+    background-image: url(../Images/pattern-bg-blue.png);
+    background-position: center;
 }
 
 .top-bar {
@@ -33,9 +36,6 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 6px;
-    background-color: var(--primary-color);
-    background-image: url(../Images/pattern-bg-blue.png);
-    background-position: center;
 }
 
 .nav-links {
@@ -77,13 +77,13 @@ ul li {
     transform-origin: center bottom;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
+.nav-links li:not(.seed-container)>a:hover,
+.nav-links li:not(.seed-container)>a.active {
     color: #fab600;
     transform: scale(1.2);
 }
 
-.nav-links li a::after {
+.nav-links li:not(.seed-container)>a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -94,8 +94,8 @@ ul li {
     transition: width 0.3s ease;
 }
 
-.nav-links li a:hover::after,
-.nav-links li a.active::after {
+.nav-links li:not(.seed-container)>a:hover::after,
+.nav-links li:not(.seed-container)>a.active::after {
     width: 100%;
 }
 
@@ -105,8 +105,8 @@ ul li {
 }
 
 .seed-logo {
-    width: 50px;
-    height: 30px;
+    width: 30px;
+    height: 20px;
     background-color: #fff;
     border: 2px solid #fab600;
     border-radius: 16px;
@@ -162,20 +162,28 @@ ul li {
     padding-bottom: 20px;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 1.5rem;
+button.btn {
+    display: block;
+    margin: 1.5rem auto 0 auto;
     padding: 0.75rem 2rem;
-    background: #e67e22;
-    color: #fff;
+    color: var(--primary-color);
     border-radius: 30px;
+    border: #cdcaca solid 1px;
     text-decoration: none;
     font-weight: 600;
+    background: transparent;
+    /* Or your preferred color */
     transition: background 0.2s;
+    cursor: pointer;
 }
 
-.btn:hover {
-    background: #cf711f;
+button.btn:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.btn-div {
+    padding: 10px;
 }
 
 
@@ -258,6 +266,7 @@ ul li {
     justify-items: center;
     padding: 0;
     margin: 0;
+    /* display: flex; */
 }
 
 .project-card {
@@ -272,6 +281,14 @@ ul li {
     border: 3px solid whitesmoke;
     font-weight: 500;
     overflow: hidden;
+}
+
+.project-card img {
+    transition: transform 0.9s ease-in-out;
+}
+
+.project-card img:hover {
+    transform: scale(1.1);
 }
 
 .project-img {
@@ -308,7 +325,7 @@ ul li {
 /* impact of org */
 
 .impact-section {
-    padding: 50px 0px;
+    padding: 50px 30px;
     background: #fff;
     text-align: center;
 }
@@ -322,7 +339,7 @@ ul li {
 .impact-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
+    gap: 10px;
     justify-items: center;
 }
 
@@ -336,6 +353,7 @@ ul li {
     align-items: center;
     min-width: 160px;
     max-width: 220px;
+    border: rgb(226, 226, 226) solid 1px;
 }
 
 .impact-icon {
@@ -371,7 +389,7 @@ ul li {
 /* parterners of the org */
 
 .partners-section {
-    padding: 50px 0;
+    padding: 50px 30px;
     background: #fff;
     text-align: center;
 }
@@ -417,9 +435,74 @@ ul li {
     display: block;
 }
 
+.partner-card img {
+    transition: transform 0.9s ease-in-out;
+}
+
 .partner-card img:hover {
     transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
+}
+
+
+/* footer styles */
+
+.footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    width: 50px;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-info .info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-info img {
+    width: 20px;
+    height: 20px;
+    color: #ebebeb;
+}
+
+.footer-social {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
+}
+
+.footer-social img:hover {
+    transform: scale(1.2);
+}
+
+.right-reserved {
+    text-align: center;
+    /* margin-top: 20px; */
 }
 
 
