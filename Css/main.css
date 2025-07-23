@@ -453,6 +453,8 @@ button.btn:hover {
     justify-content: center;
     text-align: center;
     margin: 30px;
+    background-color: rgb(253, 244, 226);
+    border-radius: 50px;
 }
 
 .location-header {
