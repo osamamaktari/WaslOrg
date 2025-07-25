@@ -33,3 +33,16 @@ document.addEventListener("DOMContentLoaded", function() {
 function goToDonate() {
     window.location.href = "Pages/donate.html";
 }
+
+
+
+// ...existing code...
+
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleBtn = document.getElementById('darkModeToggle');
+    toggleBtn.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+    });
+});
+
+// ...existing code...

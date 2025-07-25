@@ -479,10 +479,10 @@ button.btn:hover {
 }
 
 .map-container {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 10%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin-top: 15px;
 }
@@ -579,4 +579,47 @@ button.btn:hover {
     .about-us-images {
         align-items: flex-start;
     }
+}
+
+body.dark-mode {
+    background: #181818;
+    color: #ebebeb;
+}
+
+body.dark-mode header,
+body.dark-mode .top-bar,
+body.dark-mode .footer,
+body.dark-mode .projects-section,
+body.dark-mode .about-us-section,
+body.dark-mode .impact-section,
+body.dark-mode .partners-section,
+body.dark-mode .stories-section,
+body.dark-mode .location-wrapper {
+    background: #181818;
+    color: #ebebeb;
+}
+
+body.dark-mode .project-card,
+body.dark-mode .impact-card,
+body.dark-mode .partner-card,
+body.dark-mode .story-card {
+    background: #232323;
+    color: #ebebeb;
+    border-color: #fab600;
+}
+
+body.dark-mode .project-text,
+body.dark-mode .impact-title,
+body.dark-mode .partners-title,
+body.dark-mode .about-us-text h1,
+body.dark-mode .story-desc,
+body.dark-mode .story-person,
+body.dark-mode .location-title {
+    color: #fab600;
+}
+
+.dark-icon {
+    width: 30px;
+    height: 30px;
+    background-color: none;
 }

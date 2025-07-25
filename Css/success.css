@@ -22,9 +22,7 @@
                 
                 .story-img {
                     width: 50vw;
-                    /* Half the page width */
                     max-width: 500px;
-                    /* Optional: limit max size */
                     height: 200px;
                     object-fit: cover;
                     border-radius: 18px;

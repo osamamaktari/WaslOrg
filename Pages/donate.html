@@ -52,20 +52,27 @@
             <div class="form-donate">
                 <h2 style="text-align: center;">Donation Form</h2>
                 <form id="donationForm">
-                    <label>Name:</label>
-                    <input type="text" name="name" required />
-
-                    <label>Email:</label>
-                    <input type="email" name="email" required />
-
-                    <label>Amount (USD):</label>
-                    <input type="number" name="amount" required />
-
-                    <label>Message:</label>
-                    <textarea name="message"></textarea>
-
-
-                    <button class="btn" type="submit">Submit</button>
+                    <label>
+    Name:
+    <input type="text" name="name" required />
+    <span class="error"></span>
+  </label>
+                    <label>
+    Email:
+    <input type="email" name="email" required />
+    <span class="error"></span>
+  </label>
+                    <label>
+    Amount:
+    <input type="number" name="amount" required min="1" step="any" />
+    <span class="error"></span>
+  </label>
+                    <label>
+    Message:
+    <textarea name="message"></textarea>
+    <span class="error"></span>
+  </label>
+                    <button class="btn" type="submit">Donate</button>
                 </form>
             </div>
         </section>
