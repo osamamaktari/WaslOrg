@@ -14,3 +14,26 @@
     height: 450px;
     border: none;
 }
+
+/* Responsive styles for about page */
+@media (max-width: 768px) {
+    .video-container {
+        margin: 1rem 10px;
+        max-width: 100%;
+    }
+    
+    .video-container iframe {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .video-container {
+        margin: 1rem 5px;
+    }
+    
+    .video-container iframe {
+        height: 200px;
+    }
+}
+

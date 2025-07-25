@@ -623,3 +623,274 @@ body.dark-mode .location-title {
     height: 30px;
     background-color: none;
 }
+
+/* Additional responsive styles for mobile devices */
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        padding: 10px;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .nav-links li {
+        width: 100%;
+    }
+    
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .seed-logo {
+        width: 25px;
+        height: 15px;
+        padding: 12px;
+    }
+    
+    .arrow-icon {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Hero section responsive */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 50vh;
+        padding: 20px;
+    }
+    
+    .hero-content h1 {
+        font-size: 24px;
+        padding-bottom: 15px;
+    }
+    
+    .hero-content p {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+
+/* About us section responsive */
+@media (max-width: 768px) {
+    .about-us-section {
+        padding: 40px 20px;
+    }
+    
+    .about-us-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .about-us-text h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    .about-us-text p {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.6;
+    }
+    
+    .about-us-images {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .about-img,
+    .about-gif {
+        max-width: 250px;
+    }
+    
+    .about-gif {
+        top: 0;
+    }
+}
+
+/* Projects section responsive */
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 20px 15px;
+    }
+    
+    .projects-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .projects-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .project-card {
+        max-width: 100%;
+        min-width: auto;
+    }
+}
+
+/* Impact section responsive */
+@media (max-width: 480px) {
+    .impact-section {
+        padding: 30px 15px;
+    }
+    
+    .impact-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .impact-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .impact-card {
+        padding: 20px 15px;
+        min-width: auto;
+        max-width: 100%;
+    }
+    
+    .impact-number {
+        font-size: 28px;
+    }
+    
+    .impact-text {
+        font-size: 15px;
+    }
+}
+
+/* Partners section responsive */
+@media (max-width: 768px) {
+    .partners-section {
+        padding: 30px 15px;
+    }
+    
+    .partners-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .partners-cards {
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .partner-card {
+        min-width: 100px;
+        max-width: 120px;
+        height: 100px;
+    }
+}
+
+/* Map section responsive */
+@media (max-width: 768px) {
+    .location-wrapper {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+    
+    .location-title {
+        font-size: 1.2em;
+    }
+    
+    .location-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .map-container {
+        width: 100%;
+        max-width: 350px;
+        height: 300px;
+    }
+}
+
+/* Footer responsive */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px;
+    }
+    
+    .footer-row {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .footer-info {
+        order: 2;
+        align-items: center;
+    }
+    
+    .footer-social {
+        order: 1;
+        justify-content: center;
+    }
+    
+    .footer-logo {
+        order: 3;
+    }
+    
+    .footer-logo img {
+        width: 40px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .nav-links {
+        gap: 10px;
+    }
+    
+    .nav-links li a {
+        font-size: 0.9rem;
+        padding: 6px 3px;
+    }
+    
+    .hero-content h1 {
+        font-size: 20px;
+    }
+    
+    .about-us-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .projects-title,
+    .impact-title,
+    .partners-title {
+        font-size: 20px;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 40vh;
+    }
+    
+    .nav-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .top-bar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
