@@ -894,4 +894,34 @@
         }
     }
     
+    @media (max-width: 768px) {
+        .mobile-menu-btn {
+            display: flex;
+        }
+        .top-bar {
+            position: relative;
+        }
+        .top-bar nav {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: var(--primary-color);
+            z-index: 999;
+        }
+        .top-bar nav.active {
+            display: block;
+        }
+        .nav-links {
+            flex-direction: column;
+            padding: 20px;
+            gap: 15px;
+        }
+        .nav-links li {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    
     ;

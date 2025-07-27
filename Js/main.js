@@ -48,8 +48,10 @@ document.addEventListener("DOMContentLoaded", function() {
 // Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navContainer = document.querySelector('.nav-container');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navContainer = document.querySelector("nav");
+
+    const navLinks = document.querySelectorAll(".nav-links li a");
+
 
     // Toggle mobile menu
     mobileMenuBtn.addEventListener('click', function() {
