@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Wasl Org for Peace</title>
+
+		<link rel="icon" type="image/png" href="../Images/WASL-LOGO-RGB-ICON.png" />
+
+		<link rel="stylesheet" href="../Css/main.css" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Prata&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<meta charset="UTF-8" />
+		<title>login</title>
+		<style>
+			/* body {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				background: #f9fafb;
+			} */
+			.box {
+				margin-top: 30px;
+				margin-right: auto;
+				margin-left: auto;
+				background: white;
+				padding: 20px;
+				border-radius: 10px;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+				width: 300px;
+			}
+			input,
+			button {
+				width: 100%;
+				padding: 10px;
+				margin: 8px 0;
+				border: 1px solid #ccc;
+				border-radius: 6px;
+			}
+			button {
+				background: #2563eb;
+				color: white;
+				border: none;
+				cursor: pointer;
+			}
+			button:hover {
+				background: #1d4ed8;
+			}
+			.error {
+				color: red;
+				font-size: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="top-bar">
+				<a href="#">
+					<img class="logo" src="../Images/WASL-LOGO-RGB-VERTICAL-WHITE.png" />
+				</a>
+				<!-- Mobile menu button -->
+				<button
+					class="mobile-menu-btn"
+					id="mobileMenuBtn"
+					aria-label="Toggle navigation"
+				>
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+					<span class="hamburger-line"></span>
+				</button>
+				<nav>
+					<ul class="nav-links">
+						<li><a href="../index.htm">Home</a></li>
+						<li><a href="about.htm">About us</a></li>
+						<li><a href="projects.htm">Projects</a></li>
+						<li><a href="#">Success Stories</a></li>
+						<li><a href="/get-involved">events&participations</a></li>
+						<li><a href="/team">Our team</a></li>
+						<li><a href="/contactus">Contact us</a></li>
+
+						<li class="seed-container">
+							<a href="https://seed.wasl4po.org/">
+								<img
+									class="seed-logo"
+									src="../Images/SEED_fab600.png"
+									alt="seed businesswomen portal "
+								/>
+								<img
+									class="arrow-icon"
+									src="../Images/right-arrow-svgrepo-com.svg"
+									alt=""
+								/>
+							</a>
+						</li>
+						<li
+							id="darkModeToggle"
+							class="dark-mode-toggle"
+							onclick="toggleDarkMode()"
+						>
+							<img
+								class="dark-icon"
+								id="darkModeIcon"
+								src="../Images/icons8-dark-mode-50.png"
+								alt="Dark Mode Icon"
+							/>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="box">
+			<h2>Login</h2>
+			<input type="email" id="email" placeholder="Email" />
+			<input type="password" id="password" placeholder="password " />
+			<button id="loginBtn">Login</button>
+			<p id="error" class="error"></p>
+		</div>
+		<!-- <script src="Js/main.js"></script> -->
+
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+		<script>
+			document.getElementById("loginBtn").onclick = async () => {
+				let email = document.getElementById("email").value;
+				let password = document.getElementById("password").value;
+
+				try {
+					let res = await axios.post(
+						"http://localhost/capstone4-mvc/public/login",
+						{ email, password },
+						{
+							headers: { "Content-Type": "application/json" },
+							withCredentials: true,
+						}
+					);
+
+					let data = res.data;
+
+					if (data.success) {
+						window.location.href = "http://localhost:5173/";
+					} else {
+						document.getElementById("error").innerText = data.message;
+					}
+				} catch (err) {
+					document.getElementById("error").innerText = "Network error!";
+					console.error(err);
+				}
+			};
+		</script>
+	</body>
+</html>

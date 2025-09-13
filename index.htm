@@ -36,6 +36,8 @@
                     <li><a href="/get-involved">events&participations</a></li>
                     <li><a href="/contact-us">Our team</a></li>
                     <li><a href="/contact-us">Contact us</a></li>
+                    <li><a href="Pages/login.html">Login</a></li>
+
 
                     <li class="seed-container">
                         <a href="https://seed.wasl4po.org/">
@@ -227,7 +229,14 @@
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
+<button style="color: black;" id="loginBtn">Login</button>
 
+<div id="loginForm" style="display:none;">
+  <input type="email" id="email" placeholder="Email">
+  <input type="password" id="password" placeholder="password">
+  <button id="submitLogin">دخول</button>
+  <p id="error" style="color:red;"></p>
+</div>
     <!-- footer -->
     <footer class="footer">
         <div class="footer-row">
@@ -266,3 +275,28 @@
 </body>
 
 </html>
+
+
+<script>
+document.getElementById("loginBtn").onclick = () => {
+  document.getElementById("loginForm").style.display = "block";
+};
+
+document.getElementById("submitLogin").onclick = async () => {
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
+
+  let res = await fetch("/api/login", {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({email, password})
+  });
+
+  let data = await res.json();
+  if (data.success) {
+    window.location.href = data.redirect;
+  } else {
+    document.getElementById("error").innerText = data.message;
+  }
+};
+</script>
